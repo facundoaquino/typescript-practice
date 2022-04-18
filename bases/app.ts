@@ -1,10 +1,13 @@
-let msg: string = 'hi friends im here'
-console.log(msg)
+;(() => {
+	let avangers = 10
 
-const obj = {
-	name: 'facundo',
-	age: 39,
-}
+	console.log(avangers)
 
-obj.age = '9'
-console.log(typeof obj.age)
+	const villians: number = 20
+
+	if (avangers < villians) {
+		console.log('we are in problems')
+	} else {
+		console.log('saftly')
+	}
+})()
