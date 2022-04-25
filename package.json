@@ -1,16 +1,16 @@
 {
-  "name": "ts-curso",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev":"concurrently \"tsc -w bases/app.ts\" \"nodemon bases/app.js\""
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "concurrently": "^7.1.0"
-  }
+	"name": "ts-curso",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "concurrently \"tsc -w functions/app.ts\" \"nodemon functions/app.js\""
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"concurrently": "^7.1.0"
+	}
 }
