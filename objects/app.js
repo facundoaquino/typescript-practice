@@ -1,13 +1,7 @@
 ;
 (function () {
-    var flash = {
-        name: 'Barry',
-        age: 58,
-        powers: ['time travellers']
-    };
-    var superman = {
-        name: 'clark',
-        age: 68,
-        powers: ['fly']
-    };
+    // multiple types are allowed
+    var customVariable = 'Facu';
+    customVariable = 10;
+    console.log(typeof customVariable);
 })();
