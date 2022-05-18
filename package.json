@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "concurrently \"tsc -w objects/app.ts\" \"nodemon objects/app.js\""
+		"dev": "concurrently \"tsc -w classes/app.ts\" \"nodemon classes/app.js\""
 	},
 	"keywords": [],
 	"author": "",
