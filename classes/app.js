@@ -15,42 +15,29 @@ var __extends = (this && this.__extends) || (function () {
 })();
 ;
 (function () {
-    var Avenger = /** @class */ (function () {
-        function Avenger(name, realName) {
+    var Mutante = /** @class */ (function () {
+        function Mutante(name, realName) {
             this.name = name;
             this.realName = realName;
-            console.log('llamando constructor avenger');
         }
-        Avenger.prototype.getFullName = function () {
-            return "".concat(this.name, " ").concat(this.realName);
-        };
-        return Avenger;
+        return Mutante;
     }());
     var Xmen = /** @class */ (function (_super) {
         __extends(Xmen, _super);
-        function Xmen(name, realName, isMutant) {
-            var _this = _super.call(this, name, realName) || this;
-            _this.isMutant = isMutant;
-            console.log('llamando constructor Xmen');
-            return _this;
+        function Xmen() {
+            return _super !== null && _super.apply(this, arguments) || this;
         }
-        Object.defineProperty(Xmen.prototype, "fullName", {
-            get: function () {
-                return "Getter => ".concat(this.name);
-            },
-            set: function (name) {
-                this.name = name;
-            },
-            enumerable: false,
-            configurable: true
-        });
-        Xmen.prototype.getFullNameXmen = function () {
-            console.log(_super.prototype.getFullName.call(this));
+        Xmen.prototype.salvarMundo = function () {
+            console.log('Salvando mundo...');
         };
         return Xmen;
-    }(Avenger));
-    var wolverine = new Xmen('wolverinee', 'logan', true);
-    console.log(wolverine);
-    wolverine.getFullNameXmen();
-    console.log(wolverine.fullName);
+    }(Mutante));
+    var Villian = /** @class */ (function (_super) {
+        __extends(Villian, _super);
+        function Villian() {
+            return _super !== null && _super.apply(this, arguments) || this;
+        }
+        return Villian;
+    }(Mutante));
+    var wolverine = new Xmen('wolverine', 'logan');
 })();
