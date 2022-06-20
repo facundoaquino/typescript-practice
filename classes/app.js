@@ -21,11 +21,6 @@ var __extends = (this && this.__extends) || (function () {
             this.realName = realName;
             console.log('llamando constructor avenger');
         }
-        // private getFullName() {
-        // 	return `${this.name} ${this.realName}`
-        // }
-        //PRIVATE VS PROTECTED
-        //  podemos acceder a propiedades en clases que extiendan/herenden de esta usando protected , con private no.
         Avenger.prototype.getFullName = function () {
             return "".concat(this.name, " ").concat(this.realName);
         };
@@ -39,6 +34,16 @@ var __extends = (this && this.__extends) || (function () {
             console.log('llamando constructor Xmen');
             return _this;
         }
+        Object.defineProperty(Xmen.prototype, "fullName", {
+            get: function () {
+                return "Getter => ".concat(this.name);
+            },
+            set: function (name) {
+                this.name = name;
+            },
+            enumerable: false,
+            configurable: true
+        });
         Xmen.prototype.getFullNameXmen = function () {
             console.log(_super.prototype.getFullName.call(this));
         };
@@ -47,4 +52,5 @@ var __extends = (this && this.__extends) || (function () {
     var wolverine = new Xmen('wolverinee', 'logan', true);
     console.log(wolverine);
     wolverine.getFullNameXmen();
+    console.log(wolverine.fullName);
 })();
