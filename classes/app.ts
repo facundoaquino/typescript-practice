@@ -1,19 +1,34 @@
 ;(() => {
 	class Avenger {
-		static avgAge: number = 35
-		static getAvgAge() {
-			return this.name
+		constructor(public name: string, public realName: string) {
+			console.log('llamando constructor avenger')
 		}
 
-		constructor(private name: string, private team: string, public realName?: string) {}
+		// private getFullName() {
+		// 	return `${this.name} ${this.realName}`
+		// }
 
-		// BY DEFECT METHODS ARE PUBLIC
-		private bio() {
-			return `${this.name}  (${this.team})`
+		//PRIVATE VS PROTECTED
+		//  podemos acceder a propiedades en clases que extiendan/herenden de esta usando protected , con private no.
+		protected getFullName() {
+			return `${this.name} ${this.realName}`
 		}
 	}
 
-	const antman: Avenger = new Avenger('AntMan', 'Capital', 'scoty land')
-	console.log(antman.bio())
-	console.log(Avenger.getAvgAge())
+	class Xmen extends Avenger {
+		constructor(name: string, realName: string, public isMutant: boolean) {
+			super(name, realName)
+			console.log('llamando constructor Xmen')
+		}
+
+		getFullNameXmen() {
+			console.log(super.getFullName())
+		}
+	}
+
+	const wolverine = new Xmen('wolverinee', 'logan', true)
+
+	console.log(wolverine)
+
+	wolverine.getFullNameXmen()
 })()
