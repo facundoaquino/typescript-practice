@@ -5,12 +5,13 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "concurrently \"tsc -w name_spaces/app.ts\" \"nodemon interfaces/app.js\""
+		"dev": "concurrently \"tsc -w app.ts\" \"nodemon app.js\""
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"axios": "^1.2.3",
 		"concurrently": "^7.1.0"
 	}
 }
